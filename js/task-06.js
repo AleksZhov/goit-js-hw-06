@@ -31,8 +31,7 @@ console.log(validValue);
 // console.log(inputRef);
 
 inputRef.addEventListener("blur", (event) => {
+  const { value } = event.currentTarget;
   inputRef.className =
-    event.currentTarget.value.length === Number(validValue)
-      ? "valid"
-      : "invalid";
+    value.length === Number(validValue) ? "valid" : "invalid";
 });
